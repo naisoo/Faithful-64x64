@@ -124,7 +124,7 @@
             },
             {
               "progress_text_label@progress_text_label": {
-                "offset": [ -1, 3 ],
+                "offset": [ 0, 3 ],
                 "layer": 7
               }
             }
@@ -193,7 +193,7 @@
 	"uv_size": [ 736, 20 ],
 	"nineslice_size": [ 0.0, 0.0, 0.0, 0.0 ]
   },
-  
+
   "progress_bar_nub": {
     "type": "image",
     "texture": "textures/gui/achievements/notnub",
@@ -468,6 +468,44 @@
       {
         "binding_collection_name": "$hotbar_collection_name",
         "binding_type": "collection_details"
+      }
+    ]
+  },
+
+  "player_position": {
+    "type": "image",
+    "size": [ "100%c + 6px", "100%c + 2px" ],
+    "texture": "textures/ui/Black",
+    "alpha": 0.5,
+    "controls": [
+      {
+        "player_position_text": {
+          "type": "label",
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "layer": 1,
+
+          "color": "$chat_text_color",
+          "text": "#text",
+          "shadow": true,
+
+          "bindings": [
+            {
+              "binding_name": "#player_position_text",
+              "binding_name_override": "#text",
+              "binding_condition": "always_when_visible",
+              "binding_type": "global"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#player_position_visible",
+        "binding_name_override": "#visible",
+        "binding_condition": "always",
+        "binding_type": "global"
       }
     ]
   },
@@ -909,11 +947,7 @@
           "texture": "textures/ui/hotbar_8"
         }
       },
-      {
-        "button@hotbar_elipses_button": {
-          "offset": [ 0, -1 ]
-        }
-      }
+      { "button@hotbar_elipses_button": {} }
     ],
     "bindings": [
       {
@@ -935,10 +969,7 @@
           "texture": "textures/ui/hotbar_8"
         }
       },
-      {
-        "button@hotbar_elipses_button": {
-        }
-      }
+      { "button@hotbar_elipses_button": {} }
     ],
     "bindings": [
       {
@@ -965,10 +996,7 @@
           "texture": "textures/ui/hotbar_0"
         }
       },
-      {
-        "button@hotbar_elipses_button": {
-        }
-      }
+      { "button@hotbar_elipses_button": {} }
     ],
     "bindings": [
       {
@@ -993,10 +1021,7 @@
           "texture": "textures/ui/hotbar_0"
         }
       },
-      {
-        "button@hotbar_elipses_button": {
-        }
-      }
+      { "button@hotbar_elipses_button": {} }
     ],
     "bindings": [
       {
@@ -1599,33 +1624,15 @@
     ],
     "controls": [
       {
-        "player_position_text": {
-          "type": "label",
-          "text": "#text",
-          "anchor_from": "top_middle",
-          "anchor_to": "top_middle",
-          "shadow": true,
-          "alpha": 1.00,
-          "offset": [ 0, 20 ],
-          "bindings": [
-            {
-              "binding_name": "#player_position_visible",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            },
-            {
-              "binding_name": "#player_position_text",
-              "binding_name_override": "#text",
-              "binding_condition": "always_when_visible",
-              "binding_type": "global"
-            }
-          ]
-        }
+        "left_gamepad_helpers@hud.left_gamepad_helpers": {}
+      },
+      {
+        "right_gamepad_helpers@hud.right_gamepad_helpers": {}
       },
       { "centered_gui_elements@centered_gui_elements": {} },
       { "centered_gui_elements_at_bottom_middle@centered_gui_elements_at_bottom_middle": {} },
       {
-        "centered_ridingvr_gui_elements@centered_gui_elements": {
+        "centered_ridingvr_gui_elements@centered_gui_elements_at_bottom_middle": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "offset": [ 0, 60 ],
@@ -1640,6 +1647,23 @@
         }
       },
       { "not_centered_gui_elements@not_centered_gui_elements": {} },
+      {
+        "gamertag_label_for_splitscreen": {
+          "type": "label",
+          "size": [ "default", "default" ],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [ -4, 50 ],
+          "color": "$hud_gamertag_color",
+          "text_alignment": "right",
+          "text": "#gamertag",
+          "bindings": [
+            {
+              "binding_name": "#gamertag"
+            }
+          ]
+        }
+      },
       {
         "exp_rend@exp_progress_bar_and_hotbar": {
           "anchor_from": "bottom_middle",
@@ -1770,11 +1794,8 @@
                 ]
               }
             },
-            {
-              "chat_panel@hud.chat_panel": {
-                "offset": [ 0, 10 ]
-              }
-            }
+            { "player_position@hud.player_position": {} },
+            { "chat_panel@hud.chat_panel": {} }
           ]
         }
       },
@@ -1925,12 +1946,6 @@
   "hud_content": {
     "type": "panel",
     "controls": [
-      {
-        "left_gamepad_helpers@hud.left_gamepad_helpers": {}
-      },
-      {
-        "right_gamepad_helpers@hud.right_gamepad_helpers": {}
-      },
       {
         "root_panel@hud.root_panel": {}
       },

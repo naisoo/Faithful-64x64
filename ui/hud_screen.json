@@ -4,7 +4,7 @@
   //---------------------------------------------------------------------------
   // Hud Screen
   //---------------------------------------------------------------------------
-
+  
   "hud_player_renderer": {
     "type": "custom",
     "renderer": "hud_player_renderer",
@@ -205,6 +205,7 @@
   "progress_text_label": {
     "type": "label",
     "shadow": true,
+	"alpha": 1.0,
     "text": "#level_number",
     "color": "$experience_text_color",
     "anchor_from": "top_middle",

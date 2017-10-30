@@ -27,17 +27,18 @@
     "controls": [
       {
         "gamepad_helper_left_bumper@common.gamepad_helper_left_bumper": {
-          "offset": [ -1, 0 ],
+          "offset": [ -1, 1000 ],
           "anchor_from": "$left_bumper_anchor_from",
           "anchor_to": "$left_bumper_anchor_to",
-          "$hide_description": true
+          "$hide_description": false
         }
       },
       {
         "gamepad_helper_right_bumper@common.gamepad_helper_right_bumper": {
+          "offset": [ -1, 1000 ],
           "anchor_from": "$right_bumper_anchor_from",
           "anchor_to": "$right_bumper_anchor_to",
-          "$hide_description": true
+          "$hide_description": false
         }
       }
     ]
@@ -1845,7 +1846,7 @@
   },
 
   "recipe_book_layout_toggle@crafting.layout_toggle": {
-	"offset": [ 65, 0 ],
+	"offset": [ 60, 0 ],
     "$icon_control": "crafting.recipe_book_icon",
     "$toggle_group_forced_index": "$recipe_book_layout_index",
 
@@ -1854,7 +1855,7 @@
   },
 
   "survival_layout_toggle@crafting.layout_toggle": {
-	"offset": [ 39, 0 ],
+	"offset": [ 22.5, 0 ],
     "$icon_control": "crafting.inventory_icon",
     "$toggle_group_forced_index": "$survival_layout_index",
 
@@ -1864,7 +1865,7 @@
 
   "help_button@common.button": {
     "size": [ 15, 15 ],
-	"offset": [ -121.5, 0 ],
+	"offset": [ -137, 0 ],
     "layer": 5,
 
     "$default_texture|default": "textures/ui/how_to_play_button_default_light",
@@ -2070,7 +2071,7 @@
                       "controls": [
                         {
                           "gamepad_helper_left_trigger@common.gamepad_helper_left_trigger": {
-                            "offset": [ 3, -2 ],
+                            "offset": [ 212, 1000 ],
                             "anchor_from": "left_middle",
                             "anchor_to": "right_middle"
                           }
@@ -2117,7 +2118,7 @@
                   {
                     "recipe_book_layout_toggle_panel": {
                       "type": "panel",
-                      "size": [ "257.5%c", "100%" ],
+                      "size": [ "317.5%c", "100%" ],
                       "controls": [
                         { "recipe_book_layout_toggle@crafting.recipe_book_layout_toggle": {} }
                       ]
@@ -2156,7 +2157,7 @@
                   {
                     "close_button_panel": {
                       "type": "panel",
-                      "size": [ "100%c", "100%" ],
+                      "size": [ "0%c", "100%" ],
                       "bindings": [
                         {
                           "binding_name": "#close_button_visible",
@@ -2167,7 +2168,7 @@
                         {
                           "close_button@common.light_close_button": {
                             "size": [ "100%cm", "100%cm" ],
-                            "offset": [ 7.5, 0 ],
+                            "offset": [ 1, 0 ],
                             "anchor_from": "center",
                             "anchor_to": "center"
                           }
@@ -2194,7 +2195,7 @@
                       "controls": [
                         {
                           "gamepad_helper_right_trigger@common.gamepad_helper_right_trigger": {
-                            "offset": [ -2, -2 ],
+                            "offset": [ 3, 1000 ],
                             "anchor_from": "right_middle",
                             "anchor_to": "left_middle"
                           }

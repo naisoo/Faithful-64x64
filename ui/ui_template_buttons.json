@@ -59,7 +59,7 @@
   "focus_border": {
     "type": "image",
     "texture": "textures/ui/focus_border_white",
-	"size": [ "100%-2px", "95%" ]
+	"size": [ "100%-2px", "100%-2px" ]
   },
 
   "new_ui_button_panel": {

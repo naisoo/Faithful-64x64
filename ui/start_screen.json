@@ -237,10 +237,26 @@
   },
 
   //---------------------------------------------------------------------------
+  // PC Button Definitions
+  //---------------------------------------------------------------------------
+  
+  //---------------------------------------------------------------------------
   // Main Buttons Panel
   //---------------------------------------------------------------------------
 
   "main_button@common_buttons.light_text_button": {
+    "$default_button_texture|default": "textures/ui/pc_button",
+    "$hover_button_texture|default": "textures/ui/pc_button_hover",
+    "$pressed_button_texture|default": "textures/ui/pc_button_hover",
+    "$locked_button_texture|default": "textures/ui/pc_button_no",
+	"$light_button_default_text_color": [ 0.87, 0.87, 0.87 ],
+	"$light_button_hover_text_color": [ 1.0, 1.0, 0.62 ],
+	"$light_button_pressed_text_color": [ 1.0, 1.0, 0.62 ],
+	"$light_button_locked_text_color": [ 0.7, 0.7, 0.7 ],
+
+    "locked_control": "locked",
+
+    "$locked_alpha": 1,
     "size": [ "100% - 2px", "100% - 2px" ]
   },
 
